@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Drink Explorer</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h2>
+        <i class="fa-solid fa-martini-glass-citrus"></i>
+        Drink Explorer
+      </h2>
+
+      <p>Discover Your Favourite Drinks</p>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Explore Drinks</h1>
+        <p>Search and discover different drinks around the world.</p>
+      </section>
+
+      <section class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search your favorite drink..."
+        />
+
+        <button id="searchButton">Search</button>
+      </section>
+
+      <section class="main-layout">
+        <div class="drinks-section">
+          <div class="section-title">
+            <h2>Available Drinks</h2>
+            <span id="resultCount">Loading...</span>
+          </div>
+
+          <div id="drinkContainer" class="drink-grid">
+            <p class="message">Loading drinks...</p>
+          </div>
+        </div>
+
+        <div class="group-section">
+          <div class="group-header">
+            <h2>Selected Drinks</h2>
+            <span id="drinkCount">0</span>
+          </div>
+
+          <p class="group-description">You can add maximum 7 drinks.</p>
+
+          <ul id="groupList">
+            <li class="empty-message">No drinks added yet.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <div id="detailsModal" class="modal">
+      <div class="modal-overlay" id="modalOverlay"></div>
+
+      <div class="modal-content">
+        <button id="closeModal" class="close-button">&times;</button>
+
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Drink Explorer | Powered by TheCocktailDB API</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
